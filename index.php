@@ -1,29 +1,11 @@
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form Web Application</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
-      rel="stylesheet"/>
-  </head>
-  <body>
-    <?php
+<?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $connection = mysqli_connect("localhost", "root", "","formdatabase") or die("Failed to connect to database");
-
+   
 
 
             $userName = mysqli_real_escape_string($connection, $_POST['userName']);
-            $email = mysqli_real_escape_string($connection, $_POST['email']);
+         $email = mysqli_real_escape_string($connection, $_POST['email']);
             $password = mysqli_real_escape_string($connection, $_POST['password']);
             $phoneNumber = mysqli_real_escape_string($connection, $_POST['phoneNo']);
             $gender = mysqli_real_escape_string($connection, $_POST['gender']);
@@ -46,6 +28,23 @@
     }
  
 ?> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Web Application</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
+      rel="stylesheet"/>
+  </head>
+  <body>
     <header></header>
     <main>
       <div class="form-wrapper">
