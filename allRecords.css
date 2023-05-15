@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* #dad7cd #a3b18a #588157 #3a5a40 #344e41  font-family: "Merriweather", serif;
+}*/
+body {
+  background-color: #dad7cd;
+  font-family: "Montserrat", sans-serif;
+  padding: 1rem 1rem 2rem;
+  
+}
+
+input {
+  outline: none;
+}
+
+header {
+  padding: 2.2rem 1rem 4rem;
+}
+
+.search-container {
+  margin: 0 auto;
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.search-bar {
+  border: none;
+  padding-left: 0.65rem;
+}
+
+.search-button {
+  border: none;
+}
+
+.search-button {
+  padding: 0.65rem;
+  background: #3a5a40;
+  color: #dad7cd;
+  font-weight: bold;
+  border: none;
+  /* border-left: 1px solid #3a5a40; */
+}
+
+.search-button:hover {
+  color: white;
+  background: #3e5843;
+  cursor: pointer;
+}
+
+.cancel-button { 
+  padding: 0.65rem;
+  background: #ff5050;
+  color: white;
+  font-weight: bold;
+  border: none;
+
+  display:none;
+}
+
+.cancel-button:hover {
+  background: #fd3333;
+
+  cursor: pointer;
+} 
+
+.btns-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+
+h1 {
+  color: #344e41;
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+h2 {
+  color: #344e41;
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+  text-align: center;
+}
+
+.allRecords table,
+.searchResults table
+{
+  margin:0 auto;
+  /* max-width: 500px; */
+}
+
+
+
+table {
+  border-collapse: collapse;
+}
+
+th{
+  background-color: #344e41 ;
+  font-weight: bold;
+  border: 1px solid #0e1411;
+  padding: 8px;
+}
+
+td {
+  border: 1px solid #344e41;
+  padding: 8px;
+}
+
+.searchResults {
+  display: none;
+}

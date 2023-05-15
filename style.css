@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* #dad7cd #a3b18a #588157 #3a5a40 #344e41  font-family: "Merriweather", serif;
+}*/
+body {
+  background-color: #dad7cd;
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 2rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin: 5rem 2rem;
+}
+
+.form-wrapper {
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-head {
+  background-color: #3a5a40;
+  padding: 1rem;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+.img-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 1rem auto 0.5rem;
+  border: 3px solid #a3b18a;
+}
+
+.form-passport {
+  width: 100%;
+  height: 100%;
+}
+
+form {
+  padding: 2rem;
+  background-color: white;
+}
+
+.input-container,
+.radio-container,
+.submit-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 30% 65%;
+  margin-bottom: 1rem;
+}
+
+.input-element,
+.submit-container {
+  width: 100%;
+}
+
+.success input,
+.success textarea,
+.success select {
+  border: 2px solid #7cd38c;
+}
+
+.error input,
+.error textarea,
+.error select {
+  border: 2px solid #ff5050;
+}
+
+small {
+  display: block;
+  font-size: 13 px;
+  visibility: hidden;
+  padding-top: 4px;
+}
+
+.error small {
+  visibility: visible;
+  color: #ff5050;
+}
+
+.submit-btn {
+  grid-column: 1/-1;
+  padding: 0.65rem;
+  margin-top: 1rem;
+  background: #3a5a40;
+  color: #a3b18a;
+  font-weight: bold;
+  border: none;
+}
+
+.submit-btn:hover {
+  background: #3e5843;
+  color: white;
+  cursor: pointer;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid #dddcdc;
+}
+
+input,
+select,
+textarea {
+  font-family: "Montserrat", sans-serif;
+  padding: 0.5rem;
+  border: 1px solid #dddcdc;
+  border-radius: 3px;
+}
+
+::placeholder :-ms-input-placeholder ::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+textarea {
+  resize: none;
+}
+
+/* input[type="radio"] {
+  border: 1px solid #eee;
+} */
+
+.success-message {
+  margin: 2rem auto 0;
+  max-width: 400px;
+  text-align: center;
+}
+
+.allRecords-link{
+  text-decoration: none;
+  color: #344e41;
+  font-family: bold;
+  text-shadow: 2px 2px 5px #7cce8d;
+}
