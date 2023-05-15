@@ -10,11 +10,14 @@ body {
   background-color: #dad7cd;
   font-family: "Montserrat", sans-serif;
   padding: 1rem 1rem 2rem;
-  
 }
 
 input {
   outline: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 header {
@@ -54,28 +57,32 @@ header {
   cursor: pointer;
 }
 
-.cancel-button { 
+.cancel-button,
+.return-btn {
   padding: 0.65rem;
   background: #ff5050;
   color: white;
   font-weight: bold;
   border: none;
-
-  display:none;
 }
 
-.cancel-button:hover {
+.return-btn-container {
+ text-align: center;
+ margin-top: 5rem;
+}
+  
+.return-btn {
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+
+.cancel-button:hover,
+.return-btn:hover {
   background: #fd3333;
 
   cursor: pointer;
-} 
-
-.btns-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
 }
-
 
 h1 {
   color: #344e41;
@@ -87,25 +94,22 @@ h1 {
 h2 {
   color: #344e41;
   font-size: 1.2rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   text-align: center;
 }
 
 .allRecords table,
-.searchResults table
-{
-  margin:0 auto;
+.searchResults table {
+  margin: 0 auto;
   /* max-width: 500px; */
 }
-
-
 
 table {
   border-collapse: collapse;
 }
 
-th{
-  background-color: #344e41 ;
+th {
+  background-color: #344e41;
   font-weight: bold;
   border: 1px solid #0e1411;
   padding: 8px;
@@ -117,5 +121,5 @@ td {
 }
 
 .searchResults {
-  display: none;
+ margin-top: 4rem;
 }

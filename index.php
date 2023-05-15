@@ -3,9 +3,8 @@
         $connection = mysqli_connect("localhost", "root", "","formdatabase") or die("Failed to connect to database");
    
 
-
             $userName = mysqli_real_escape_string($connection, $_POST['userName']);
-         $email = mysqli_real_escape_string($connection, $_POST['email']);
+            $email = mysqli_real_escape_string($connection, $_POST['email']);
             $password = mysqli_real_escape_string($connection, $_POST['password']);
             $phoneNumber = mysqli_real_escape_string($connection, $_POST['phoneNo']);
             $gender = mysqli_real_escape_string($connection, $_POST['gender']);
@@ -26,8 +25,7 @@
 
             mysqli_close($connection);
     }
- 
-?> 
+ ?>
 
 
 <!DOCTYPE html>

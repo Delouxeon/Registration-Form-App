@@ -39,12 +39,9 @@ $result = $conn->query($sql);
 <body>
     <header>
         <h1>RECORDS</h1>
-        <form class="search-container" name="searchForm" id="searchForm" action = "<?php echo $_SERVER['PHP_SELF'];?>" method = "POST">
+        <form class="search-container" name="searchForm" id="searchForm" action = "./records.php" method = "POST">
             <input class="search-bar" name="search-bar" id = "search-bar" type="text" placeholder="Search records here...">
-            <div class="btns-container">
-                <input class="cancel-button" id="cancel-button" name = "cancel-button" type="button" value="Cancel" onclick="hideSearchResults()">
-                <input class="search-button" id="search-button" name = "search-button" type="submit" value="search" onclick="hideAllRecords()">
-            </div>
+            <input class="search-button" id="search-button" name = "search-button" type="submit" value="search" >
         </form>
     </header>
     <section id="allRecords" class="allRecords">
@@ -76,75 +73,6 @@ $result = $conn->query($sql);
         ?>
     </table>
     </section>
-
-
-
-    <section id="searchResults" class="searchResults">
-        <h2>Search Results</h2>
-        <?php
-            // Check if the search form is submitted
-            if ($_SERVER["REQUEST_METHOD"] == "POST"){
-                $searchTerm = $_POST['search-bar'];
-
-                // Query to search for records
-                $sql = "SELECT * FROM userrecords WHERE Name LIKE '%$searchTerm%' OR Email LIKE '%$searchTerm%'";
-                $result = $conn->query($sql);
-            
-            }
-
-            // Display search results if available
-            if (isset($result) && $result->num_rows > 0) {
-                echo "<table>";
-                echo "<tr>";
-                echo "<th>Name</th>";
-                echo "<th>Email</th>";
-                echo "<th>Gender</th>";
-                echo "<th>Language</th>";
-                echo "<th>About</th>";
-                echo "</tr>";
-
-                while ($row = $result->fetch_assoc()) {
-                    echo "<tr>";
-                    echo "<td>".$row["Name"]."</td>";
-                    echo "<td>".$row["Email"]."</td>";
-                    echo "<td>".$row["Gender"]."</td>";
-                    echo "<td>".$row["Language"]."</td>";
-                    echo "<td>".$row["About"]."</td>";
-                    echo "</tr>";
-                }
-
-                echo "</table>";
-
-            } elseif (isset($result) && $result->num_rows <= 0) {
-                echo "No results found.";
-            }
-    ?>
-</section>
-<script>
-    "use strict"
-
-    const searchForm = document.getElementById("searchForm");
-    const allRecordsSection = document.getElementById("allRecords");
-    const searchResultsSection = document.getElementById("searchResults");
-    const cancelButton = document.getElementById("cancel-button");
-    searchForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        // hideAllRecords()
-    });
-
-
-    function hideAllRecords(){
-        allRecordsSection.style.display = "none";
-        searchResultsSection.style.display ="block";
-        cancelButton.style.display = "block"
-    }
-
-    function hideSearchResults(){
-        allRecordsSection.style.display = "block";
-        searchResultsSection.style.display ="none";
-        cancelButton.style.display = "none"
-    }
-    </script>
 </body>
 </html>
 
